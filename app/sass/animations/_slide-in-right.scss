@@ -1,0 +1,49 @@
+// Slide from right
+[data-position='top-right'],
+[data-position='bottom-right'] {
+
+  .c-notification {
+    margin-right: 10px;
+    margin-top: 10px;
+    transform: translateX(110%);
+    transition: opacity, transform;
+
+    //&:last-child {
+    //  margin-bottom: 0;
+    //}
+  }
+
+  // show
+  .slideInRight {
+    animation: showWithSlideInFromRight 200ms forwards;
+  }
+
+  // hide
+  .slideInLeft {
+    animation: hideWithSlideOutToRight 200ms forwards !important;
+  }
+}
+
+@keyframes hideWithSlideOutToRight {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(110%);
+    transition-timing-function: $hideSlideTimingFunction;
+    transition-duration: $hideSlideDuration;
+  }
+}
+
+@keyframes showWithSlideInFromRight {
+  0%    {
+    opacity: 0;
+    transform: translateX(110%);
+  }
+  100%  {
+    opacity: 1;
+    transform: translateX(0%);
+    transition-timing-function: $showSlideTimingFunction;
+    transition-duration: $showSlideDuration;
+  }
+}

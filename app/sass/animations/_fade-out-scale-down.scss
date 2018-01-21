@@ -1,0 +1,11 @@
+// fadeOutDown
+.fadeOutScaleDown {
+  animation: fadeOutScaleDown 300ms forwards;
+}
+
+@keyframes fadeOutScaleDown {
+  0%    { transform: scale(1); opacity: 1 }
+  20%   { transform: scale(.85); opacity: 1 }
+  70%   { transform: scale(.85); opacity: 1 }
+  100%  { transform: scale(.6); opacity: 0 }
+}

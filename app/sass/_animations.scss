@@ -1,0 +1,16 @@
+$showSlideDuration: 150ms !default;
+$hideSlideDuration: 220ms !default;
+$showSlideTimingFunction: cubic-bezier(.17,.67,0,1.03);
+$hideSlideTimingFunction: cubic-bezier(.77,-0.01,.31,-0.24);
+$opacityOnShown: .98 !default;
+$opacityOnHidden: 0 !default;
+
+@import "animations/close-cross";
+@import "animations/slide-in-right";
+@import "animations/slide-in-left";
+@import "animations/fade_in";
+@import "animations/fade-in-bounce";
+@import "animations/fade-out";
+@import "animations/fade-out-scale-up";
+@import "animations/fade-out-scale-down";
+@import "animations/icons-animations";

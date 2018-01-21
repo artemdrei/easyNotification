@@ -1,0 +1,263 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.333; }
+
+html,
+body {
+  margin: 0;
+  padding: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto Condensed', sans-serif; }
+
+input[type="checkbox"],
+input[type="radio"] {
+  width: 16px;
+  height: 16px; }
+
+input:focus,
+button:focus,
+select:focus,
+textarea:focus,
+a:focus {
+  outline: 3px solid #3f87a6;
+  outline-offset: 1px; }
+
+h1 {
+  font-size: 50px; }
+
+h2 {
+  position: relative;
+  margin-bottom: 20px;
+  font-size: 33px;
+  text-align: center; }
+
+h3 {
+  margin-bottom: 5px;
+  font-size: 20px; }
+
+label {
+  display: block;
+  margin-top: 5px; }
+  label input {
+    position: relative;
+    bottom: 1px;
+    margin: 0;
+    vertical-align: middle; }
+
+input[type="text"],
+input[type="number"],
+select {
+  height: 40px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 0 10px; }
+
+textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 3px; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px; }
+
+.welcome {
+  position: relative;
+  min-height: 300px;
+  background: #333 url("../img/page/binding-dark.png"); }
+  .welcome__content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    min-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    text-align: center;
+    color: #fff; }
+
+.navigation__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.github-badge {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: block;
+  width: 50px;
+  height: 50px;
+  font-size: 0;
+  background: url("../img/page/github.svg") center no-repeat;
+  background-size: contain; }
+
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
+
+.config {
+  padding-bottom: 30px; }
+  .config__item {
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background: #f1f1f1; }
+    .config__item > h3:first-child {
+      margin-top: 0; }
+  .config__textarea-label {
+    font-size: 0;
+    visibility: hidden; }
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.btn-wrapper {
+  text-align: center;
+  padding: 30px 0; }
+  .btn-wrapper .btn {
+    margin: 0 5px; }
+
+.btn {
+  box-sizing: border-box;
+  display: inline-block;
+  min-width: 150px;
+  margin: 0;
+  padding: 10px 40px;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-align: center;
+  font: 500 20px 'Roboto Condensed', sans-serif;
+  text-transform: uppercase;
+  border-radius: 3px;
+  background: transparent;
+  cursor: pointer;
+  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1);
+  -webkit-transition: background 50ms ease-in;
+  transition: background 50ms ease-in; }
+  .btn--primary {
+    background: #4DB6AC;
+    border: 1px solid #44a69c;
+    color: #fff; }
+    .btn--primary:hover, .btn--primary:focus {
+      background: #44a69c; }
+  .btn--warning {
+    background: #e86e6e;
+    border: 1px solid #e55858;
+    color: #fff; }
+    .btn--warning:hover, .btn--warning:focus {
+      background: #e55858; }
+
+.globalPositionWrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 100px;
+  background: #f1f1f1;
+  padding: 30px 10px 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd; }
+  .globalPositionWrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 100%;
+    background: #ddd; }
+  .globalPositionWrapper > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .globalPositionWrapper label {
+    display: inline-block; }
+
+.how-to {
+  background: #f1f1f1; }
+
+.panel {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px; }
+  .panel:last-child {
+    margin-bottom: 0; }
+
+.badge {
+  margin-top: 35px;
+  margin-bottom: 15px; }
+  .badge:first-child {
+    margin-top: 0; }
+
+.language {
+  position: relative;
+  padding-left: 35px; }
+  .language::before {
+    content: '';
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    background: url("../img/page/html.svg") center no-repeat;
+    background-size: contain; }
+
+.html::before {
+  background: url("../img/page/html.svg") center no-repeat;
+  background-size: contain; }
+
+.js::before {
+  background: url("../img/page/js.svg") center no-repeat;
+  background-size: contain; }
+
+:not(pre) > code[class*="language-"], pre[class*="language-"] {
+  padding: 0 0 0 20px !important;
+  border-left: 4px solid #44a69c; }
+
+@media (max-width: 1024px) {
+  .flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .config__item {
+    margin: 15px 0;
+    width: 100%; } }

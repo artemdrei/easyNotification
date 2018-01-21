@@ -1,0 +1,25 @@
+.c-progressbar {
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background: rgba(0,0,0, .2);
+  animation: progressAnimation 10000ms ease-out forwards; // custom duration could be changed with js config
+}
+
+.c-notification:hover {
+  .c-progressbar {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes progressAnimation {
+  from {
+    transform: translateX(0%);
+    transition: transform;
+  }
+  to {
+    transform: translateX(-100%);
+    transition: transform;
+  }
+}

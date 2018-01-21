@@ -1,0 +1,23 @@
+[data-position='top-right'] {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+[data-position='top-left'] {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+}
+
+[data-position='bottom-right'] {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+[data-position='bottom-left'] {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+}

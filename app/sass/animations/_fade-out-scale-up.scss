@@ -1,0 +1,9 @@
+// fadeOutUp
+.fadeOutScaleUp {
+  animation: fadeOutScaleUp 200ms forwards;
+}
+
+@keyframes fadeOutScaleUp {
+  0%    { transform: scale(1); opacity: $opacityOnShown }
+  100%  { transform: scale(1.2); opacity: 0; }
+}

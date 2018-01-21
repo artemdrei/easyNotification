@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Condensed" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/page.css">
+    <link rel="stylesheet" href="./css/prism.css">
+    <link rel="stylesheet" href="./css/easy-notification.css">
+    <title>Notification Js</title>
+</head>
+<body>
+  <main class="main">
+      <section class="welcome">
+          <div class="container">
+              <header class="header">
+                  <nav class="navigation">
+                      <ul class="navigation__list">
+                          <li>
+                              <!--<a class="navigation__item navigation__item-github" href="#">Git Hub</a>-->
+                          </li>
+                      </ul>
+                  </nav>
+                  <!--<a class="github-badge" href="#">Git Hub</a>-->
+              </header>
+              <div class="welcome__content">
+                  <h1>Easy Notifications</h1>
+                  <p>ES6  |  Lightweight  |  No dependencies</p>
+                  <button class="btn btn-show-notification btn--primary">Show</button>
+              </div>
+          </div>
+      </section>
+      <section class="config">
+          <div class="config__inner container">
+              <h2>Configuration</h2>
+              <div class="config__sections flex">
+                  <div class="config__item">
+                      <h3>Configuration </h3>
+                      <label>
+                          <input type="checkbox" class="autoHide">
+                          autoHide
+                      </label>
+                      <label>
+                          <input type="checkbox" class="showProgressBar">
+                          showProgressBar
+                      </label>
+                      <label>
+                          autoHideDuration<br>
+                          <input type="number" class="autoHideDuration" placeholder="10000" value="">
+                      </label>
+                      <label>
+                          showAnimation<br>
+                          <select class="showAnimation animations" data-animation-type="showAnimation">
+                              <option>slideInRight</option>
+                              <option>fadeIn</option>
+                              <option>fadeInBounce</option>
+                          </select>
+                      </label>
+                      <label>
+                          hideAnimation<br>
+                          <select class="hideAnimation animations" data-animation-type="hideAnimation">
+                              <option>slideInLeft</option>
+                              <option>fadeOut</option>
+                              <option>fadeOutScaleDown</option>
+                              <option>fadeOutScaleUp</option>
+                          </select>
+                      </label>
+
+                      <h3>Notification Position</h3>
+                      <div class="globalPositionWrapper">
+                          <div class="globalPositionWrapper__top">
+                              <label>
+                                  <input type="radio" class="globalPosition" name="globalPosition" data-global-position="top-left">
+                                  <span>top-left</span>
+                              </label>
+                              <label>
+                                  <span>top-right</span>
+                                  <input type="radio" class="globalPosition" name="globalPosition" data-global-position="top-right" checked>
+                              </label>
+                          </div>
+                          <div class="globalPositionWrapper__bottom">
+                              <label>
+                                  <input type="radio" class="globalPosition" name="globalPosition" data-global-position="bottom-left">
+                                  <span>bottom-left</span>
+                              </label>
+                              <label>
+                                  <span>bottom-right</span>
+                                  <input type="radio" class="globalPosition" name="globalPosition" data-global-position="bottom-right">
+                              </label>
+
+                          </div>
+                      </div>
+                  </div>
+                  <div class="config__item">
+                      <h3>Type</h3>
+                      <label>
+                          <input type="radio" name="type" class="random" checked>
+                          Random
+                      </label>
+                      <label>
+                          <input type="radio" name="type" class="success">
+                          Success
+                      </label>
+                      <label>
+                          <input type="radio" name="type" class="error">
+                          Error
+                      </label>
+                      <label>
+                          <input type="radio" name="type" class="warning">
+                          Warning
+                      </label>
+                      <label>
+                          <input type="radio" name="type" class="info">
+                          Info
+                      </label>
+                      <h3>Custom content (text/html)</h3>
+                      <label class="config__textarea-label" for="message">Custom content (text or html)</label>
+                      <textarea id="message" rows="3" placeholder="Enter a content..."></textarea>
+                  </div>
+                  <div class="config__item">
+                      <h3>JS Config</h3>
+                      <pre id="configPresentation">
+<code class="config-preview"></code>
+</pre>
+                  </div>
+              </div>
+              <div class="btn-wrapper">
+                  <button class="btn btn-show-notification btn--primary">Show</button>
+                  <button class="btn btn-remove-notifications btn--warning">Remove</button>
+              </div>
+          </div>
+      </section>
+      <section class="how-to">
+          <div class="container">
+              <h2>How to</h2>
+              <h3>Simple usage</h3>
+<div class="panel">
+  <header class="badge"> <span class="language html">HTML</span> | Include css to the header</header>
+<pre class="language-html">
+<code>
+&lt;header&gt;
+  &lt;link rel="stylesheet" href="your-css-path/easy-notification.css"&gt;
+&lt;/header&gt;
+</code>
+</pre>
+
+<header class="badge"> <span class="language html">HTML</span> | Include js to the end of the body </header>
+<pre class="language-html">
+<code>
+  ...
+  &lt;script src="your-js-path/easyNotification.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+</code>
+</pre>
+
+<header class="badge"> <span class="language js">JS</span> | Usage </header>
+<pre class="language-js">
+<code>
+let notification = new EasyNotification();
+
+notification.notify('Everything is good', 'success');
+notification.notify('Something wend wrong', 'error');
+</code>
+</pre>
+</div>
+
+              <h3>Custom usage</h3>
+              <div class="panel">
+<header class="badge"> <span class="language js">JS</span> | Paste custom config into configuration method before calling</header>
+<pre class="language-js">
+<code>
+let notification = new EasyNotification();
+let config = {
+    'autoHide': true,
+    'showProgressBar': true,
+    'autoHideDuration': 10000,
+    'globalPosition': 'top-left',
+    'showAnimation': 'fadeInBounce',
+    'hideAnimation': 'fadeOutScaleDown'
+};
+notification.configuration(config)
+
+notification.notify('Everything is good', 'success');
+notification.notify('Something wend wrong', 'error');
+</code>
+</pre>
+              </div>
+          </div>
+      </section>
+  </main>
+  <script src="./js/easyNotification.js"></script>
+  <script src="./js/page.js"></script>
+  <script src="./js/prism.js"></script>
+</body>
+</html>

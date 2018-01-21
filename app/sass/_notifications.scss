@@ -1,0 +1,116 @@
+.c-notification {
+  display: flex;
+  width: 300px;
+  font-family: "Roboto", Arial, Tahoma, sans-serif;
+  margin-bottom: 10px;
+  overflow: hidden;
+  border-radius: 7px;
+  box-shadow: 2px 2px 4px rgba(0,0,0, .2);
+  z-index: $z-index;
+
+  &__icon {
+    position: relative;
+    width: 70px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) scale(.8);
+      display: block;
+      width: 26px;
+      height: 26px;
+      background-size: contain;
+      opacity: .1;
+      transition: all 200ms ease-in-out; // TODO: replace with current transitions
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) scale(1);
+      display: block;
+      width: 30px;
+      height: 30px;
+      opacity: .01;
+      background: #000;
+      border-radius: 50%;
+      transition-delay: 400ms;
+    }
+  }
+
+  &__body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 15px 30px 15px 0;
+  }
+
+  &__title {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+
+    &:first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  &__content {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  &__close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  // mod for icons
+  &--success {
+    background-color: $success-300;
+
+    .c-notification__icon::before {
+      background: url("../img/easyNotification/check.svg") center no-repeat;
+      background-size: 90%;
+    }
+  }
+
+  &--error {
+    background-color: $error-300;
+
+    .c-notification__icon::before {
+      background: url("../img/easyNotification/error.svg") center no-repeat;
+      background-size: 90%;
+    }
+  }
+
+  &--warning {
+    background-color: $warning-300;
+
+    .c-notification__icon::before {
+      background: url("../img/easyNotification/warning.svg") center no-repeat;
+      background-size: 90%;
+    }
+  }
+
+  &--info {
+    background-color: $info-300;
+
+    .c-notification__icon::before {
+      background: url("../img/easyNotification/info.svg") center no-repeat;
+      background-size: 90%;
+    }
+  }
+}

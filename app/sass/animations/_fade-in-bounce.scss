@@ -1,0 +1,10 @@
+// fadeInBounce
+.fadeInBounce {
+  animation: fadeInBounce 200ms forwards;
+}
+
+@keyframes fadeInBounce {
+  0%    {  transform: scale(.95); opacity: $opacityOnHidden; }
+  50%   {  transform: scale(1.05); opacity: $opacityOnShown; }
+  100%  {  transform: scale(1); opacity: $opacityOnShown; }
+}

@@ -1,0 +1,44 @@
+$animation-duration: 100ms !default;
+$size-box: 16px !default;
+$size-cross: 16px !default;
+$top: 7px !default;
+$bg: #444 !default;
+
+.close-cross {
+  width: $size-box;
+  height: $size-box;
+  transition: transform $animation-duration;
+
+  &::before {
+    position: absolute;
+    top: $top;
+    display: block;
+    content: '';
+    width: $size-cross;
+    height: 2px;
+    background: $bg;
+    transform: rotate(45deg);
+    transition: all $animation-duration;
+  }
+
+  &::after {
+    position: absolute;
+    top: $top;
+    display: block;
+    content: '';
+    width: $size-cross;
+    height: 2px;
+    background: $bg;
+    transform: rotate(-45deg);
+    transition: all $animation-duration;
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      transform: rotate(0deg);transition: all $animation-duration;
+    }
+  }
+}
