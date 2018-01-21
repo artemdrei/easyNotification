@@ -40,8 +40,8 @@
       -webkit-transform: translate(-50%, -50%) scale(0.8);
               transform: translate(-50%, -50%) scale(0.8);
       display: block;
-      width: 26px;
-      height: 26px;
+      width: 25px;
+      height: 25px;
       background-size: contain;
       opacity: .1;
       -webkit-transition: all 200ms ease-in-out;
@@ -93,22 +93,22 @@
     background-color: #4DB6AC; }
     .c-notification--success .c-notification__icon::before {
       background: url("../img/easyNotification/check.svg") center no-repeat;
-      background-size: 90%; }
+      background-size: 100%; }
   .c-notification--error {
     background-color: #FFCDD2; }
     .c-notification--error .c-notification__icon::before {
       background: url("../img/easyNotification/error.svg") center no-repeat;
-      background-size: 90%; }
+      background-size: 100%; }
   .c-notification--warning {
     background-color: #FFD54F; }
     .c-notification--warning .c-notification__icon::before {
       background: url("../img/easyNotification/warning.svg") center no-repeat;
-      background-size: 90%; }
+      background-size: 100%; }
   .c-notification--info {
     background-color: #64B5F6; }
     .c-notification--info .c-notification__icon::before {
       background: url("../img/easyNotification/info.svg") center no-repeat;
-      background-size: 90%; }
+      background-size: 100%; }
 
 .c-progressbar {
   position: absolute;
